@@ -1,4 +1,4 @@
-# 3. 切换国内模型（配置 URL 和密钥）
+# 《AgentScope 2.0实战指南》03 - 切换国内模型（配置 URL 和密钥）
 
 ### 3.1 为什么需要这一步
 
@@ -223,3 +223,5 @@ ANYSEARCH_KEY = os.getenv("ANYSEARCH_API_KEY", "as_sk_你的密钥")  # 请替�
 - OpenAI 兼容网关几乎都是 `Bearer Token` 认证，个别平台的差异（如额外加组织 ID）通过 `OpenAICredential` 的扩展字段解决即可。
 
 到这里，「模型能通」这个地基就打好了。第 4 节开始，我们给这个只会聊天的模型装上工具。
+
+源码地址：[https://github.com/LarryLi93/agentscope2](https://github.com/LarryLi93/agentscope2)

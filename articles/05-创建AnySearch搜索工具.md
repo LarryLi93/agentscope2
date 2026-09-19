@@ -1,4 +1,4 @@
-# 5. 创建 AnySearch 搜索工具
+# 《AgentScope 2.0实战指南》05 - 创建 AnySearch 搜索工具
 
 ### 5.1 为什么需要联网搜索
 
@@ -253,3 +253,5 @@ reply = await agent.reply(
 这个 Agent 的 Toolkit 同时挂载 `[AnySearchTool(), Read(), Write()]`，模型会自动编排四步：**搜 → 写 → 读 → 汇报**。
 
 单看每个工具都很简单，但交给一个会推理的 Agent 组合起来，就变成了一个能「调研并产出文档」的自动化工位。
+
+源码地址：[https://github.com/LarryLi93/agentscope2](https://github.com/LarryLi93/agentscope2)

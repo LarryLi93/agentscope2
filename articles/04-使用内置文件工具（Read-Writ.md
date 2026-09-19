@@ -1,4 +1,4 @@
-# 4. 使用内置文件工具（Read / Write / Edit）
+# 《AgentScope 2.0实战指南》04 - 使用内置文件工具（Read / Write / Edit）
 
 ### 4.1 为什么需要文件工具
 
@@ -248,3 +248,5 @@ asyncio.run(main())
 - **大文件**：Read 默认有内容长度上限，超长文件按页/分段读；Write 单次写入也有体积限制，超大文件建议分块写；
 - **二进制**：文本类工具面向文本文件，图片等二进制内容请用第 9 节的图片解析器或专门的视觉工具；
 - **路径安全**：交给 Agent 的路径尽量限制在 `working_directories` 白名单内，防止模型被提示词诱导去读写系统敏感路径。
+
+源码地址：[https://github.com/LarryLi93/agentscope2](https://github.com/LarryLi93/agentscope2)

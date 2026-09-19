@@ -1,4 +1,4 @@
-# 9. RAG 检索增强生成：让 Agent 读你的私有资料
+# 《AgentScope 2.0实战指南》09 - RAG 检索增强生成：让 Agent 读你的私有资料
 
 ### 9.1 什么是 RAG，为什么需要它
 
@@ -280,3 +280,5 @@ rag_mw = RAGMiddleware(
 - **维度数**影响存储与检索成本，**1024 维**在效果与体积之间较均衡。
 
 > 同时提醒：**切块参数、检索参数、评估集三者是配套调整的**——改一个就要重跑一遍评估，避免「调了好像没调」。
+
+源码地址：[https://github.com/LarryLi93/agentscope2](https://github.com/LarryLi93/agentscope2)

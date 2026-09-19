@@ -1,4 +1,4 @@
-# 11. 完整实战：RAG 问答助手（带 UI 界面）
+# 《AgentScope 2.0实战指南》11 - 完整实战：RAG 问答助手（带 UI 界面）
 
 前面十节都是在命令行里跑脚本。这一节把前面学过的东西组装成一个能在浏览器里用的 Web 应用：FastAPI 做后端，原生 HTML/CSS/JS 做前端，Agent 负责问答，挂上 RAG 知识库、ReMe 长期记忆和 AnySearch 联网搜索三个工具。
 
@@ -2659,3 +2659,5 @@ uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 * 最后如实列出了它和生产环境的差距。
 
 整个专栏到这里，你已经走完了从安装、模型配置、工具、技能、上下文压缩、长期记忆、RAG，到一个完整 Web 应用的全过程。剩下的，是挑一个你自己的真实场景，把这套骨架改成你的产品。
+
+源码地址：[https://github.com/LarryLi93/agentscope2](https://github.com/LarryLi93/agentscope2)

@@ -1,4 +1,4 @@
-# 2. 安装 AgentScope 2.0
+# 《AgentScope 2.0实战指南》02 - 安装 AgentScope 2.0
 
 ### 2.1 环境要求
 
@@ -217,3 +217,5 @@ await launch_console(agent)   # 进入 user> 交互对话
 > 它们各司其职：pydantic 管数据结构校验，httpx 管异步 HTTP，pydantic-ai 是底层 Agent 运行时，qdrant-client 是第 9 节向量库的客户端。
 > **依赖多是「集成度深」的体现**——上层能力都替你接好了，写业务代码时不用自己拼装这些零件。
 > 换句话说：这些上层集成框架都做好了，你写十几行业务代码就能把它们用起来。
+
+源码地址：[https://github.com/LarryLi93/agentscope2](https://github.com/LarryLi93/agentscope2)
