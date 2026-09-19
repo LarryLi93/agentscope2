@@ -1,0 +1,28 @@
+# macOS
+.DS_Store
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python caches and build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Tutorial runtime workspaces
+codes/workspace_reme/
+codes/ai_assistant/data/
+codes/ai_assistant/logs/

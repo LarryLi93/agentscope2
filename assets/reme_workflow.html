@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<title>AgentScope ReMe Workflow</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<style>
+  body { margin: 0; padding: 24px; background: #ffffff; }
+  #chart { max-width: 1400px; transform-origin: top left; }
+  .wrap { transform: scale(0.72); width: 1200px; }
+</style>
+</head>
+<body>
+<div class="wrap"><div id="chart" class="mermaid">
+flowchart TD
+    A[User message] --> B[agent.reply / reply_stream]
+    B --> C[on_reply starts async retrieval task]
+    B --> E
+
+    subgraph MainLoop[Reasoning-acting loop]
+        E{Before reasoning:<br/>is async retrieval done?}
+        E -->|Yes| F[Inject selected memories as HintBlock]
+        E -->|No| G[Skip memory injection this iteration]
+        F --> H[Reasoning]
+        G --> H
+        H --> I{Tool calls?}
+        I -->|Yes| J[Acting: run tools such as Read / Write]
+        J --> K[Agent may update topic .md files and MEMORY.md]
+        K --> E
+        I -->|No| L[Return assistant response]
+    end
+
+    subgraph AsyncTask[Async memory retrieval task]
+        C --> M[List Markdown topic files]
+        M --> N[Parse filename, frontmatter description, mtime]
+        N --> O[LLM selects relevant filenames]
+        O --> P[Read selected Markdown files]
+        P --> Q[Task finished with formatted memory context]
+    end
+
+    Q -. checked before each reasoning .-> E
+</div></div>
+<script>
+  mermaid.initialize({ startOnLoad: true, theme: "default", flowchart: { htmlLabels: true } });
+</script>
+</body>
+</html>

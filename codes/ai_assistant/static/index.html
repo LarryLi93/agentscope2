@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAG 问答助手 · AgentScope 2.0</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/style.css?v=4" />
+  <script src="/vendor/marked.min.js"></script>
+  <script src="/vendor/purify.min.js"></script>
+</head>
+<body>
+<div class="app">
+
+  <!-- 左侧：新对话 + 会话列表 -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-title">RAG 问答助手</div>
+      <div class="brand-sub">AgentScope 2.0</div>
+    </div>
+
+    <button id="btn-new" class="btn-new">＋ 新建对话</button>
+
+    <div class="side-label">对话列表</div>
+    <nav id="session-list" class="session-list"></nav>
+
+    <div class="side-foot">
+      <button id="btn-docs" class="btn-ghost">
+        📄 知识库 <span id="doc-count" class="badge">0</span>
+      </button>
+      <div id="doc-panel" class="doc-panel hidden"></div>
+    </div>
+  </aside>
+
+  <!-- 右侧：聊天区 -->
+  <main class="main">
+    <header class="topbar">
+      <div id="chat-title" class="chat-title">新对话</div>
+      <div class="top-actions">
+        <input id="file-input" type="file" multiple
+               accept=".md,.markdown,.txt,.pdf,.docx" hidden />
+        <button id="btn-upload" class="btn-outline">⬆ 上传文档</button>
+      </div>
+    </header>
+
+    <section id="messages" class="messages">
+      <div class="empty-tip" id="empty-tip">
+        <div class="empty-title">开始提问</div>
+        <div class="empty-desc">上传文档后可基于资料问答；也能联网搜索、跨会话记住你的偏好。</div>
+        <div class="empty-examples">
+          <button class="example" data-q="根据我上传的文档，总结一下主要内容">📄 总结上传的文档</button>
+          <button class="example" data-q="帮我搜索一下 AgentScope 2.0 的最新动态">🔎 联网搜索最新动态</button>
+          <button class="example" data-q="记住我偏好简洁的中文回答">🧠 记住我的回答偏好</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="composer">
+      <div id="tool-status" class="tool-status hidden"></div>
+      <div class="input-row">
+        <textarea id="input" rows="1"
+          placeholder="输入问题，Enter 发送，Shift + Enter 换行"></textarea>
+        <button id="btn-send" class="btn-send">发送</button>
+      </div>
+    </footer>
+  </main>
+
+</div>
+<script src="/app.js?v=4"></script>
+</body>
+</html>
