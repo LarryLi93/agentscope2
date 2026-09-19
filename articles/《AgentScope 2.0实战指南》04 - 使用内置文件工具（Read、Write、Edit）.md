@@ -1,4 +1,4 @@
-# 《AgentScope 2.0实战指南》04 - 使用内置文件工具（Read / Write / Edit）
+# 《AgentScope 2.0实战指南》04 - 使用内置文件工具（Read、Write、Edit）
 
 ### 4.1 为什么需要文件工具
 
