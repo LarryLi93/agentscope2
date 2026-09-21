@@ -2,12 +2,7 @@
 
 ### 3.1 为什么需要这一步
 
-AgentScope 默认直连 OpenAI 官方接口，国内开发者通常卡在两点：
-
-- **网络不可达**：官方接口在国内无法稳定访问；
-- **成本与合规**：数据出境、计费方式都有顾虑。
-
-好在国内主流模型网关（APIMart、OpenFlowly、DeepSeek、通义 DashScope、Moonshot 等）基本都提供 **OpenAI 兼容协议**。切换时只需要改两样东西：
+AgentScope 默认按海外接口配置，国内开发者改用**国内兼容网关**即可，业务代码一行不动——更省心、也更合规。好在国内主流模型网关（APIMart、OpenFlowly、DeepSeek、通义 DashScope、Moonshot 等）基本都提供 **OpenAI 兼容协议**。切换时只需要改两样东西：
 
 - `base_url`：网关地址；
 - `api_key`：你的密钥。
@@ -207,7 +202,7 @@ ANYSEARCH_KEY = os.getenv("ANYSEARCH_API_KEY", "as_sk_你的密钥")  # 请替�
 
 ### 3.9 换协议怎么办：接入其他模型
 
-如果要接的不是 OpenAI 兼容接口（比如直连 Anthropic 或 Gemini），AgentScope 同样提供了对称的凭证与模型类：
+如果要接的不是 OpenAI 兼容接口（比如接入 Anthropic、Gemini 等其他厂商），AgentScope 同样提供了对称的凭证与模型类：
 
 | 厂商 | 凭证类 | 模型类 |
 |---|---|---|
