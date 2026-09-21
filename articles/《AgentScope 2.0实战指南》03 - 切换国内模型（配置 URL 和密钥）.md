@@ -55,7 +55,7 @@ def build_credential() -> OpenAICredential:
     return OpenAICredential(
         api_key=API_KEY,              # 例如 sk-xxxx（你的网关密钥）
 
-        base_url=BASE_URL,            # 例如 https://www.openflowly.com/v1
+        base_url=BASE_URL,            # 例如 https://ark.cn-beijing.volces.com/api/v3
 
     )
 
@@ -169,7 +169,7 @@ ANYSEARCH_KEY = os.getenv("ANYSEARCH_API_KEY", "as_sk_你的密钥")  # 请替�
 | 通义 DashScope | qwen 系列（qwen3、qwen-plus 等） | 官方渠道，AgentScope 原生集成（DashScopeCredential） |
 | DeepSeek | deepseek-chat / deepseek-reasoner | 推理强、价格低，OpenAI 兼容 |
 | Moonshot | kimi 系列 | 长上下文见长 |
-| OpenFlowly | Qwen 3.7 Flash、Bge-m3 等聚合 | 国内可直连，模型聚合，本文实测所用 |
+| 火山方舟（Volcengine Ark） | Doubao 系列、doubao-embedding 等 | 字节系国产服务，OpenAI 兼容，本文实测所用 |
 | APIMart | 多模型聚合 | 统一计费与密钥管理 |
 
 选择建议，按优先级：
